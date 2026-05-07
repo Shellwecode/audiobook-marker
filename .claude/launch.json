@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Static File Server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", ".", "-p", "8080", "--no-clipboard"],
+      "port": 8080
+    }
+  ]
+}

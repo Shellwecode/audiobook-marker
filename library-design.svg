@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=DM+Sans:wght@400;500;600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- DARK THEME — Library Modal                   -->
+  <!-- ============================================ -->
+  <g id="Dark-Library-Modal" transform="translate(20, 20)">
+    <!-- Backdrop -->
+    <rect id="backdrop-dark" width="580" height="880" rx="0" fill="rgba(0,0,0,0.7)"/>
+
+    <!-- Modal Container -->
+    <g id="modal-dark" transform="translate(20, 20)">
+      <rect id="modal-bg-dark" width="540" height="840" rx="14" fill="#16161a" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+      <!-- Header -->
+      <g id="header-dark" transform="translate(28, 28)">
+        <text font-family="Playfair Display, serif" font-size="18" fill="#f0ede8" font-weight="400">Library</text>
+        <text font-family="DM Sans, sans-serif" font-size="13" fill="rgba(240,237,232,0.4)" y="30" letter-spacing="0.01em">Browse public-domain books, open a local file, or paste a URL.</text>
+      </g>
+
+      <!-- Book Grid -->
+      <g id="book-grid-dark" transform="translate(28, 88)">
+        <!-- Row 1: 3 cards (153px wide each, 12px gap) -->
+        <!-- Card 1: Alice in Wonderland -->
+        <g id="card-alice-dark" transform="translate(0, 0)">
+          <rect width="153" height="275" rx="10" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <clipPath id="clip-alice-d"><rect width="153" height="201" rx="10"/></clipPath>
+          <rect width="153" height="201" rx="10" fill="rgb(74,143,168)" clip-path="url(#clip-alice-d)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">A</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#f0ede8">Alice in Wonderland</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.03em">Lewis Carroll</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#e8a45a" letter-spacing="0.07em">CH. 1 · ~12 MIN</text>
+        </g>
+
+        <!-- Card 2: Pride & Prejudice -->
+        <g id="card-pride-dark" transform="translate(165, 0)">
+          <rect width="153" height="275" rx="10" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <rect width="153" height="201" rx="10" fill="rgb(155,107,140)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">P</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#f0ede8">Pride &amp; Prejudice</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.03em">Jane Austen</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#e8a45a" letter-spacing="0.07em">CH. 1 · ~6 MIN</text>
+        </g>
+
+        <!-- Card 3: Sherlock Holmes -->
+        <g id="card-sherlock-dark" transform="translate(330, 0)">
+          <rect width="153" height="275" rx="10" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <rect width="153" height="201" rx="10" fill="rgb(78,110,128)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">S</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#f0ede8">Sherlock Holmes</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.03em">Arthur Conan Doyle</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#e8a45a" letter-spacing="0.07em">CH. 1 · ~38 MIN</text>
+        </g>
+
+        <!-- Row 2: 2 cards (236px wide each, 12px gap) -->
+        <!-- Card 4: Wizard of Oz -->
+        <g id="card-wizard-dark" transform="translate(0, 287)">
+          <rect width="236" height="387" rx="10" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <rect width="236" height="315" rx="10" fill="rgb(122,140,58)"/>
+          <text x="118" y="160" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">W</text>
+          <text x="12" y="334" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#f0ede8">Wizard of Oz</text>
+          <text x="12" y="351" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.03em">L. Frank Baum</text>
+          <text x="12" y="369" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#e8a45a" letter-spacing="0.07em">CH. 1 · ~8 MIN</text>
+        </g>
+
+        <!-- Card 5: Treasure Island -->
+        <g id="card-treasure-dark" transform="translate(248, 287)">
+          <rect width="236" height="387" rx="10" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <rect width="236" height="315" rx="10" fill="rgb(138,74,60)"/>
+          <text x="118" y="160" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">T</text>
+          <text x="12" y="334" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#f0ede8">Treasure Island</text>
+          <text x="12" y="351" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.03em">Robert Louis Stevenson</text>
+          <text x="12" y="369" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#e8a45a" letter-spacing="0.07em">CH. 1-2 · ~18 MIN</text>
+        </g>
+      </g>
+
+      <!-- Divider: ADD YOUR OWN -->
+      <g id="divider-dark" transform="translate(28, 764)">
+        <line x1="0" y1="0" x2="170" y2="0" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+        <text x="242" y="4" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(240,237,232,0.4)" letter-spacing="0.1em" text-anchor="middle">ADD YOUR OWN</text>
+        <line x1="314" y1="0" x2="484" y2="0" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      </g>
+
+      <!-- Add Your Own Row -->
+      <g id="add-row-dark" transform="translate(28, 784)">
+        <!-- Browse Local button -->
+        <g id="local-file-btn-dark">
+          <rect width="110" height="36" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="32" y="22" font-family="DM Sans, sans-serif" font-size="12" fill="rgba(240,237,232,0.4)">Browse Local</text>
+        </g>
+        <!-- URL input -->
+        <g id="url-input-dark" transform="translate(120, 0)">
+          <rect width="270" height="36" rx="8" fill="#1e1e24" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="12" fill="rgba(240,237,232,0.4)">https://.../audiobook.mp3</text>
+        </g>
+        <!-- Load URL button -->
+        <g id="load-url-btn-dark" transform="translate(400, 0)">
+          <rect width="84" height="36" rx="8" fill="#e8a45a"/>
+          <text x="42" y="22" font-family="DM Sans, sans-serif" font-size="12" font-weight="500" fill="#0d0d0f" text-anchor="middle">Load URL</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LIGHT THEME — Library Modal                  -->
+  <!-- ============================================ -->
+  <g id="Light-Library-Modal" transform="translate(620, 20)">
+    <!-- Backdrop -->
+    <rect id="backdrop-light" width="580" height="880" rx="0" fill="rgba(0,0,0,0.5)"/>
+
+    <!-- Modal Container -->
+    <g id="modal-light" transform="translate(20, 20)">
+      <rect id="modal-bg-light" width="540" height="840" rx="14" fill="#eeeae3" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+
+      <!-- Header -->
+      <g id="header-light" transform="translate(28, 28)">
+        <text font-family="Playfair Display, serif" font-size="18" fill="#1c1a17" font-weight="400">Library</text>
+        <text font-family="DM Sans, sans-serif" font-size="13" fill="rgba(28,26,23,0.45)" y="30" letter-spacing="0.01em">Browse public-domain books, open a local file, or paste a URL.</text>
+      </g>
+
+      <!-- Book Grid -->
+      <g id="book-grid-light" transform="translate(28, 88)">
+        <!-- Row 1: 3 cards -->
+        <g id="card-alice-light" transform="translate(0, 0)">
+          <rect width="153" height="275" rx="10" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <rect width="153" height="201" rx="10" fill="rgb(74,143,168)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">A</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#1c1a17">Alice in Wonderland</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.03em">Lewis Carroll</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#c47333" letter-spacing="0.07em">CH. 1 · ~12 MIN</text>
+        </g>
+
+        <g id="card-pride-light" transform="translate(165, 0)">
+          <rect width="153" height="275" rx="10" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <rect width="153" height="201" rx="10" fill="rgb(155,107,140)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">P</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#1c1a17">Pride &amp; Prejudice</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.03em">Jane Austen</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#c47333" letter-spacing="0.07em">CH. 1 · ~6 MIN</text>
+        </g>
+
+        <g id="card-sherlock-light" transform="translate(330, 0)">
+          <rect width="153" height="275" rx="10" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <rect width="153" height="201" rx="10" fill="rgb(78,110,128)"/>
+          <text x="76" y="105" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">S</text>
+          <text x="12" y="220" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#1c1a17">Sherlock Holmes</text>
+          <text x="12" y="237" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.03em">Arthur Conan Doyle</text>
+          <text x="12" y="255" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#c47333" letter-spacing="0.07em">CH. 1 · ~38 MIN</text>
+        </g>
+
+        <!-- Row 2: 2 wider cards (236px) -->
+        <g id="card-wizard-light" transform="translate(0, 287)">
+          <rect width="236" height="387" rx="10" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <rect width="236" height="315" rx="10" fill="rgb(122,140,58)"/>
+          <text x="118" y="160" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">W</text>
+          <text x="12" y="334" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#1c1a17">Wizard of Oz</text>
+          <text x="12" y="351" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.03em">L. Frank Baum</text>
+          <text x="12" y="369" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#c47333" letter-spacing="0.07em">CH. 1 · ~8 MIN</text>
+        </g>
+
+        <g id="card-treasure-light" transform="translate(248, 287)">
+          <rect width="236" height="387" rx="10" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <rect width="236" height="315" rx="10" fill="rgb(138,74,60)"/>
+          <text x="118" y="160" font-family="Playfair Display, serif" font-size="34" font-style="italic" fill="rgba(255,255,255,0.55)" text-anchor="middle" dominant-baseline="middle">T</text>
+          <text x="12" y="334" font-family="Playfair Display, serif" font-size="12" font-weight="600" fill="#1c1a17">Treasure Island</text>
+          <text x="12" y="351" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.03em">Robert Louis Stevenson</text>
+          <text x="12" y="369" font-family="DM Sans, sans-serif" font-size="9" font-weight="500" fill="#c47333" letter-spacing="0.07em">CH. 1-2 · ~18 MIN</text>
+        </g>
+      </g>
+
+      <!-- Divider -->
+      <g id="divider-light" transform="translate(28, 764)">
+        <line x1="0" y1="0" x2="170" y2="0" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+        <text x="242" y="4" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(28,26,23,0.45)" letter-spacing="0.1em" text-anchor="middle">ADD YOUR OWN</text>
+        <line x1="314" y1="0" x2="484" y2="0" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+      </g>
+
+      <!-- Add Your Own Row -->
+      <g id="add-row-light" transform="translate(28, 784)">
+        <g id="local-file-btn-light">
+          <rect width="110" height="36" rx="8" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="32" y="22" font-family="DM Sans, sans-serif" font-size="12" fill="rgba(28,26,23,0.45)">Browse Local</text>
+        </g>
+        <g id="url-input-light" transform="translate(120, 0)">
+          <rect width="270" height="36" rx="8" fill="#e6e1d9" stroke="rgba(0,0,0,0.09)" stroke-width="1"/>
+          <text x="12" y="22" font-family="DM Sans, sans-serif" font-size="12" fill="rgba(28,26,23,0.45)">https://.../audiobook.mp3</text>
+        </g>
+        <g id="load-url-btn-light" transform="translate(400, 0)">
+          <rect width="84" height="36" rx="8" fill="#c47333"/>
+          <text x="42" y="22" font-family="DM Sans, sans-serif" font-size="12" font-weight="500" fill="#f7f4ef" text-anchor="middle">Load URL</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

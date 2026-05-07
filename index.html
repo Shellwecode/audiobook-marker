@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audiobook Marker</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="logo">Audiobook Marker</span>
+  <div class="topbar-actions">
+    <button class="open-file-btn" id="libraryBtn" type="button">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+        <rect x="1.5" y="2" width="3" height="12" rx="0.6" stroke="currentColor" stroke-width="1.3"/>
+        <rect x="6"   y="2" width="3" height="12" rx="0.6" stroke="currentColor" stroke-width="1.3"/>
+        <rect x="10.5" y="2" width="3.5" height="12" rx="0.6" stroke="currentColor" stroke-width="1.3"/>
+      </svg>
+      Library
+    </button>
+    <button class="theme-btn" id="themeToggleBtn" aria-label="Switch to light mode">
+      <svg id="themeIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+    </button>
+  </div>
+</div>
+
+<!-- STAGE -->
+<div class="stage">
+  <div class="ambient" id="ambient"></div>
+
+  <!-- Cover -->
+  <div class="cover-wrap" id="coverWrap">
+    <div class="cover">
+      <div class="cover-placeholder">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3a9 9 0 100 18A9 9 0 0012 3z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M9 8l7 4-7 4V8z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        <span>No Audio</span>
+      </div>
+    </div>
+    <div class="cover-ring"></div>
+  </div>
+
+  <!-- Book Info -->
+  <div class="book-info">
+    <div class="book-title" id="bookTitle">Load an audiobook to begin</div>
+    <div class="book-author" id="bookAuthor">tap "Open File" above</div>
+  </div>
+
+  <!-- Player -->
+  <div class="player">
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-fill" id="progressFill"></div>
+      <div class="progress-markers" id="progressMarkers"></div>
+      <div class="progress-thumb" id="progressThumb"></div>
+      <div class="progress-tooltip" id="progressTooltip"></div>
+    </div>
+    <div class="time-row">
+      <span id="currentTime">0:00</span>
+      <span id="totalTime">0:00</span>
+    </div>
+    <div class="controls">
+      <button class="ctrl-btn" id="skipBackBtn" title="Back 15s">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.99 5V1l-5 5 5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6h-2c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+          <text x="7.5" y="15.5" font-size="5.5" fill="currentColor" font-family="DM Sans,sans-serif" font-weight="500">15</text>
+        </svg>
+      </button>
+      <button class="play-btn" id="playBtn">
+        <svg id="playIcon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5.14v14l11-7-11-7z"/>
+        </svg>
+      </button>
+      <button class="ctrl-btn" id="skipFwdBtn" title="Forward 30s">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.01 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/>
+          <text x="7.5" y="15.5" font-size="5.5" fill="currentColor" font-family="DM Sans,sans-serif" font-weight="500">30</text>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Fallback "Add note" button -->
+  <button class="add-note-btn" id="addNoteBtn">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="2" width="6" height="13" rx="3" fill="currentColor"/>
+      <path d="M5 11a7 7 0 0014 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <line x1="12" y1="18" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    Add note
+  </button>
+  <div class="sr-hint" id="srHint"></div>
+</div>
+
+<!-- LISTENING INDICATOR (corner dot) -->
+<div class="listen-indicator" id="listenIndicator" title="Listening for 'hey note'">
+  <div class="listen-dot"></div>
+  <span class="listen-lbl">speak your note</span>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-pill"></div>
+  <div class="drawer-handle" id="drawerHandle">
+    <div class="drawer-handle-top">
+      <div class="drawer-title">
+        Annotations
+        <span class="annotation-count" id="annotationCount">0</span>
+      </div>
+      <div>
+        <button class="btn-ghost" id="copyBtn" style="font-size:11px;padding:4px 10px;display:none;">Copy Notes</button>
+      </div>
+    </div>
+    <div class="drawer-book-name" id="drawerBookName"></div>
+  </div>
+  <div class="drawer-body">
+    <div id="annotationsPanel">
+      <div class="drawer-empty" id="drawerEmpty">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" opacity="0.3">
+          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Say <em style="font-style:italic;color:var(--accent)">"hey note"</em> followed by your thought<br>
+        while the audio is playing
+      </div>
+      <div id="annotationsList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIBRARY MODAL -->
+<div class="modal-bg" id="libraryModalBg">
+  <div class="modal library-modal">
+    <h3>Library</h3>
+    <p>Browse public-domain books, open a local file, or paste a URL.</p>
+    <div class="library-grid" id="libraryGrid"></div>
+    <div class="library-divider"><span>add your own</span></div>
+    <div class="library-add">
+      <label class="library-file-btn" for="fileInput">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+          <path d="M2 4a2 2 0 012-2h3l2 2h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+        </svg>
+        Browse Local
+      </label>
+      <div class="library-url-wrap">
+        <input type="url" id="urlInput" placeholder="https://…/audiobook.mp3" autocomplete="off" />
+        <button class="btn-primary" id="urlLoadBtn">Load URL</button>
+      </div>
+    </div>
+    <input type="file" id="fileInput" accept="audio/*,.m4b" style="display:none">
+  </div>
+</div>
+
+<!-- TEXT NOTE MODAL (SR unavailable or manual) -->
+<div class="modal-bg" id="textModalBg">
+  <div class="modal">
+    <h3>Add a Note</h3>
+    <p>Type your annotation — it'll be saved at <strong id="textModalTime">0:00</strong>.</p>
+    <input type="text" id="textNoteInput" placeholder="Your note…" maxlength="400" autocomplete="off" />
+    <div class="modal-footer">
+      <button class="btn-ghost" id="textModalCancel">Cancel</button>
+      <button class="btn-primary" id="textModalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<audio id="audioEl"></audio>
+
+<script>
+// Shared state — all modules read/write through this object
+window.APP = {
+  audio: document.getElementById('audioEl'),
+  annotations: [],
+  duration: 0
+};
+</script>
+<script src="player.js"></script>
+<script src="annotations.js"></script>
+<script src="map.js"></script>
+
+</body>
+</html>

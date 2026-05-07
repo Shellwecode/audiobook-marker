@@ -1,0 +1,106 @@
+{
+  "$description": "Audiobook Marker design tokens — maps Figma styles to CSS custom properties",
+
+  "color": {
+    "dark": {
+      "bg":       { "value": "#0d0d0f",               "css": "--bg",      "figma": "dark/bg" },
+      "surface":  { "value": "#16161a",               "css": "--surface", "figma": "dark/surface" },
+      "surface2": { "value": "#1e1e24",               "css": "--surface2","figma": "dark/surface2" },
+      "border":   { "value": "rgba(255,255,255,0.07)","css": "--border",  "figma": "dark/border" },
+      "text":     { "value": "#f0ede8",               "css": "--text",    "figma": "dark/text" },
+      "muted":    { "value": "rgba(240,237,232,0.4)", "css": "--muted",   "figma": "dark/muted" },
+      "accent":   { "value": "#e8a45a",               "css": "--accent",  "figma": "dark/accent" },
+      "red":      { "value": "#e85a5a",               "css": "--red",     "figma": "dark/red" },
+      "green":    { "value": "#5ab87a",               "css": "--green",   "figma": "dark/green" },
+      "topbarBg":       { "value": "rgba(13,13,15,0.85)",     "css": "--topbar-bg",       "figma": "dark/topbar-bg" },
+      "btnBorder":      { "value": "rgba(255,255,255,0.15)",  "css": "--btn-border",      "figma": "dark/btn-border" },
+      "btnBorderHover": { "value": "rgba(255,255,255,0.2)",   "css": "--btn-border-hover","figma": "dark/btn-border-hover" },
+      "accentBg":       { "value": "rgba(232,164,90,0.1)",    "css": "--accent-bg",       "figma": "dark/accent-bg" },
+      "accentBgHover":  { "value": "rgba(232,164,90,0.18)",   "css": "--accent-bg-hover", "figma": "dark/accent-bg-hover" },
+      "listenDotBg":    { "value": "rgba(240,237,232,0.3)",   "css": "--listen-dot-bg",   "figma": "dark/listen-dot-bg" }
+    },
+    "light": {
+      "bg":       { "value": "#f7f4ef",               "css": "--bg",      "figma": "light/bg" },
+      "surface":  { "value": "#eeeae3",               "css": "--surface", "figma": "light/surface" },
+      "surface2": { "value": "#e6e1d9",               "css": "--surface2","figma": "light/surface2" },
+      "border":   { "value": "rgba(0,0,0,0.09)",      "css": "--border",  "figma": "light/border" },
+      "text":     { "value": "#1c1a17",               "css": "--text",    "figma": "light/text" },
+      "muted":    { "value": "rgba(28,26,23,0.45)",   "css": "--muted",   "figma": "light/muted" },
+      "accent":   { "value": "#c47333",               "css": "--accent",  "figma": "light/accent" },
+      "red":      { "value": "#c0392b",               "css": "--red",     "figma": "light/red" },
+      "green":    { "value": "#1e8449",               "css": "--green",   "figma": "light/green" },
+      "topbarBg":       { "value": "rgba(247,244,239,0.85)",  "css": "--topbar-bg",       "figma": "light/topbar-bg" },
+      "btnBorder":      { "value": "rgba(0,0,0,0.15)",        "css": "--btn-border",      "figma": "light/btn-border" },
+      "btnBorderHover": { "value": "rgba(0,0,0,0.2)",         "css": "--btn-border-hover","figma": "light/btn-border-hover" },
+      "accentBg":       { "value": "rgba(196,115,51,0.1)",    "css": "--accent-bg",       "figma": "light/accent-bg" },
+      "accentBgHover":  { "value": "rgba(196,115,51,0.18)",   "css": "--accent-bg-hover", "figma": "light/accent-bg-hover" },
+      "listenDotBg":    { "value": "rgba(28,26,23,0.3)",      "css": "--listen-dot-bg",   "figma": "light/listen-dot-bg" }
+    }
+  },
+
+  "shadows": {
+    "dark": {
+      "cover":   { "value": "0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px var(--border)", "css": "--cover-shadow", "figma": "dark/cover-shadow" },
+      "playBtn": { "value": "0 4px 20px rgba(240,237,232,0.15)",                     "css": "--play-shadow",  "figma": "dark/play-shadow" }
+    },
+    "light": {
+      "cover":   { "value": "0 16px 48px rgba(0,0,0,0.1), 0 0 0 1px var(--border)", "css": "--cover-shadow", "figma": "light/cover-shadow" },
+      "playBtn": { "value": "0 4px 20px rgba(28,26,23,0.12)",                        "css": "--play-shadow",  "figma": "light/play-shadow" }
+    }
+  },
+
+  "typography": {
+    "heading": {
+      "fontFamily": "'Playfair Display', serif",
+      "figmaFont": "Playfair Display",
+      "styles": {
+        "title":     { "size": "20px", "weight": 600, "letterSpacing": "-0.01em", "figma": "heading/title" },
+        "modal":     { "size": "18px", "weight": 400, "figma": "heading/modal" },
+        "logo":      { "size": "14px", "weight": 400, "letterSpacing": "0.15em", "textTransform": "uppercase", "figma": "heading/logo" },
+        "cardTitle": { "size": "12px", "weight": 600, "lineHeight": 1.35, "figma": "heading/card-title" },
+        "coverLetter": { "size": "34px", "weight": 400, "fontStyle": "italic", "figma": "heading/cover-letter" }
+      }
+    },
+    "body": {
+      "fontFamily": "'DM Sans', sans-serif",
+      "figmaFont": "DM Sans",
+      "styles": {
+        "base":  { "size": "13px", "weight": 400, "lineHeight": 1.55, "figma": "body/base" },
+        "small": { "size": "12px", "weight": 400, "letterSpacing": "0.04em", "figma": "body/small" },
+        "tiny":  { "size": "11px", "weight": 400, "letterSpacing": "0.04em", "figma": "body/tiny" },
+        "micro": { "size": "10px", "weight": 400, "letterSpacing": "0.08em", "textTransform": "uppercase", "figma": "body/micro" },
+        "nano":  { "size": "9px",  "weight": 500, "letterSpacing": "0.07em", "textTransform": "uppercase", "figma": "body/nano" }
+      }
+    }
+  },
+
+  "spacing": {
+    "topbarHeight": "52px",
+    "topbarPadding": "24px",
+    "coverSize": "200px",
+    "playerWidth": "320px",
+    "controlGap": "24px",
+    "drawerPadding": "20px",
+    "modalPadding": "28px",
+    "modalWidth": "380px",
+    "libraryModalWidth": "540px"
+  },
+
+  "radii": {
+    "small": "6px",
+    "medium": "8px",
+    "large": "10px",
+    "pill": "20px",
+    "drawer": "18px",
+    "modal": "14px",
+    "round": "50%"
+  },
+
+  "animation": {
+    "themeTransition": "0.25s ease",
+    "drawerCurve": "cubic-bezier(0.32, 0.72, 0, 1)",
+    "drawerDuration": "0.4s",
+    "spinDuration": "12s",
+    "breatheDuration": "2.8s"
+  }
+}
